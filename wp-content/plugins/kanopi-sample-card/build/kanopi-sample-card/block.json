@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "create-block/kanopi-sample-card",
+  "version": "0.1.0",
+  "title": "Kanopi Sample Card",
+  "category": "widgets",
+  "icon": "smiley",
+  "description": "A simple editable card block with image, title, and description.",
+  "example": {},
+  "supports": {
+    "html": false
+  },
+  "textdomain": "kanopi-sample-card",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "h3"
+    },
+    "description": {
+      "type": "string",
+      "source": "html",
+      "selector": "p"
+    },
+    "imageUrl": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "img",
+      "attribute": "src"
+    },
+    "imageAlt": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "img",
+      "attribute": "alt"
+    }
+  }
+}
